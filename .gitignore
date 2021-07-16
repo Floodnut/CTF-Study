@@ -1,3 +1,5 @@
 #elf
 
 *.elf
+*.txt
+*.gdb_history
