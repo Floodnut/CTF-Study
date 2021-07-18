@@ -1,3 +1,5 @@
+#https://dreamhack.io/wargame/challenges/44/
+
 #!/usr/bin/env python3
 import subprocess
 
@@ -17,7 +19,7 @@ def index():
 def ping():
     if request.method == 'POST':
         host = request.form.get('host')
-        cmd = f'ping -c 3 "{host}"'
+        cmd = f'ping -c 3 "{host}"' #This is important Line for solve this problem!
         try:
             output = subprocess.check_output(['/bin/sh', '-c', cmd], timeout=5)
             return render_template('ping_result.html', data=output.decode('utf-8'))
